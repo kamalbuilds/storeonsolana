@@ -2,32 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  color: #fff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.phantom-button {
+  height: inherit !important;
+  padding: inherit !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.phantom-button:hover {
+  background-color: transparent !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.phantom-button:hover > .wallet-adapter-button-start-icon > svg,
+.phantom-button:hover > span {
+  color: rgb(243 244 246) !important;
+}
+
+.Huddle {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+button {
+  background: #246bfd;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+.heading {
+  background: #246bfd;
+  color: white;
+  text-align: center;
+  font-size: 40px;
 }
